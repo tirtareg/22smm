@@ -114,7 +114,7 @@ valueBox(
   value = paste(format(belum, big.mark = " "), " (", 
                 round(belum/nrow(db) * 100, 0), "% )",
                 sep = " "),
-  caption = "Tidak Registrasi Berkas",
+  caption = "Belum Registrasi Berkas",
   icon = "fas fa-file-upload",
   color = "brown"
 )
