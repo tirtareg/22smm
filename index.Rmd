@@ -271,7 +271,6 @@ kable(data, row.names = F) %>%
 #            options = list(dom = 'B',
 #                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print')))
 
-
 library(downloadthis)
 
 data %>%
@@ -304,6 +303,16 @@ kable(data) %>%
   kable_styling(bootstrap_options = "striped", full_width = F,
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Jenis Kelamin" = 2, " " = 1))
+
+data %>%
+  download_this(
+    output_name = "camaba_per_prov",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 ```
 
 
@@ -361,6 +370,16 @@ kable(data) %>%
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 4, "Registrasi Online" = 4, " " = 1))
 
+
+data %>%
+  download_this(
+    output_name = "progres_regis_per_fakultas",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 ```
 
 row
@@ -399,6 +418,15 @@ kable(data, row.names = F) %>%
   pack_rows("Kedokteran", 39, 42, label_row_css = "background-color: #666; color: #fff;")
 
 
+data %>%
+  download_this(
+    output_name = "progres_reg_per_prodi",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 ```
 
 Camaba Registrasi
