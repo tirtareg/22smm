@@ -264,6 +264,25 @@ kable(data, row.names = F) %>%
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 5, "Pilihan 1" = 4, "Pilihan 2" = 4))
 
+#library(DT)
+
+#data %>%
+#  datatable(extensions = 'Buttons',
+#            options = list(dom = 'B',
+#                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print')))
+
+
+library(downloadthis)
+
+data %>%
+  download_this(
+    output_name = "keketatan_prodi_smmptn_2022",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 ```
 
 
